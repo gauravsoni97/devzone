@@ -1,0 +1,47 @@
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// colors in website
+
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #f5f9ff;
+
+.services-section {
+    .service-box {
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.589);
+        padding: 30px;
+        border-radius: 1px;
+        background-color: $s-col;
+        i {
+            font-size: 1.5rem;
+            color: $p-col;
+            padding: 10% 0;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.486);
+            width: 30%;
+            margin-bottom: 10px;
+
+        }
+        h3{
+            
+            transition: 0.4s all ease-in-out;
+        }
+        
+        &:hover {
+            h3 {
+                color: $p-col;
+            }
+            box-shadow: 0 0 5px rgba(0, 29, 66, 0.623) ;
+            
+            i{
+border: 1px solid $p-col;
+            }
+        }
+    }
+}
+
+

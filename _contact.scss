@@ -1,0 +1,48 @@
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #f5f9ff;
+
+//mixins ---
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section {
+    background: $bgblu;
+    .contact-box {
+        background: $s-col;
+        padding: 20px;
+        border-radius: 10px;
+
+        i {
+            font-size: 2rem;
+            color: $p-col;
+            padding: 10%;
+        }
+        form{
+            @include flexbox();
+            flex-direction: column;
+            input{
+                outline: none;
+                width: 70%;
+                margin: 10px;
+                line-height: 1.5rem;
+                border: none;
+                padding: 10px;
+                text-transform: capitalize;
+                border: 1px solid rgba(22, 22, 22, 0.336);
+            }
+            textarea{
+                resize: none;
+                @extend input;
+            }
+        }
+    }
+}
+
+
+

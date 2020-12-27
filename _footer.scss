@@ -1,0 +1,151 @@
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// colors in website
+
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #f5f9ff;
+
+#footer {
+    .footer-newsletter {
+        background-color: rgb(195, 232, 255);
+        @include flexbox();
+        padding: 5% 0;
+        h4 {
+            font-size: 2rem;
+            color: $para-col;
+        }
+        p {
+            color: $para-col;
+        }
+        form {
+            input {
+                outline: none;
+                border: none;
+                border-radius: 5px 0 0 5px;
+                line-height: 2rem;
+                width: 30%;
+            }
+            .formbtn {
+                width: 10%;
+                border-radius: 0 5px 5px 0;
+                background-color: $p-col;
+                color: $s-col;
+                font-weight: 500;
+            }
+        }
+    }
+    .footer-top {
+        padding: 20px 0;
+
+        .footer-contact {
+            padding: 20px 0;
+            h3 {
+                padding: 10px 0;
+                font-size: 2rem;
+            }
+            p {
+                padding: 10px 0;
+                font-size: 0.8rem;
+                font-weight: 500;
+                color: $para-col;
+            }
+        }
+        .footer-links {
+            margin-top: 25px;
+            h4 {
+                padding: 20px 0;
+                font-size: 1rem;
+                font-weight: 800;
+            }
+            ul {
+                list-style: none;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $para-col;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        padding: 10px;
+                    }
+                    i {
+                        font-size: 0.7rem;
+                        color: $p-col;
+                    }
+                }
+            }
+        }
+        .footer-links-social {
+            p {
+                color: $para-col;
+                font-weight: 500;
+            }
+            .social-links {
+                @include flexbox();
+                justify-content: space-evenly;
+            }
+            @extend .footer-links;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #footer {
+        .footer-newsletter {
+            padding: 10%;
+            h4 {
+                font-size: 1.5rem;
+                color: $para-col;
+            }
+
+            form {
+                input {
+                    outline: none;
+                    border: none;
+                    border-radius: 5px 0 0 5px;
+                    line-height: 2rem;
+                    width: 60%;
+                }
+                .formbtn {
+                    width: 20%;
+                    border-radius: 0 5px 5px 0;
+                    background-color: $p-col;
+                    color: $s-col;
+                    font-weight: 500;
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        .footer-top {
+            padding: 30px 0;
+            .footer-contact {
+                text-align: center;
+                padding: 20px 0;
+                h3 {
+                    padding: 10px 0;
+                    font-size: 2.5rem;
+                }
+                p {
+                    padding: 10px 0;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    color: $para-col;
+                }
+            }
+            .footer-links {
+                margin-top: 20px;
+                flex-direction: column;
+                h4 {
+                    margin-left: 25px;
+                    font-size: 1rem;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}

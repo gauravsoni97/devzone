@@ -1,0 +1,21 @@
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// colors in website
+
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #f5f9ff;
+
+
+@media (max-width:768px){
+ #portfolio{
+     img{
+         padding: 10px 20px;
+     }
+ }
+}

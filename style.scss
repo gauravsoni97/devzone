@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// scss sections files
+
+@import "navbar";
+@import "home";
+@import "about";
+@import "services";
+@import "portfolio";
+@import "team";
+@import "dropdown";
+@import "contact";
+@import "footer";
+
+html {
+    scroll-behavior: smooth;
+}
+a:hover {
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+
+// button manipulations
+
+// hover effects on something
+
+//mixins ---
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// colors in website
+
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #e7f1fd;
+
+.section {
+    padding: 70px 0;
+}
+.section-head {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 20px 0;
+    background: $bgblu;
+    color: #106eea;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+h2 {
+    font-size: 2.5rem;
+    span {
+        color: $p-col;
+    }
+}
+.para-head {
+    color: $para-col;
+    font-weight: 600;
+    padding:30px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+.arrowbtn {
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+    border-radius: 50px;
+z-index: 999;
+    span {
+        color: $p-col;
+        font-size: 30px;
+    }
+}
+
+
+
+

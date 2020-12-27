@@ -1,0 +1,132 @@
+//mixins ---
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// colors in website
+
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #fbfeff;
+
+#banner {
+    background: linear-gradient(rgba(255, 255, 255, 0.767), rgba(255, 255, 255, 0.555)),
+        url("homebg.jpg") no-repeat center center/cover;
+
+    .bannertitle {
+        padding: 5rem 0;
+        h1 {
+            color: $dark-col;
+            font-size: 3rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: -15px;
+            padding: 10px;
+            span {
+                color: $p-col;
+            }
+        }
+
+        .lead {
+            color: $para-col;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .homebtn {
+            @include flexbox();
+            justify-content: start;
+            color: $dark-col;
+            font-size: 1rem;
+            .btn1 {
+                background-color: $p-col;
+                color: $s-col;
+                &:hover {
+                    color: darken($p-col, 20%);
+                }
+            }
+
+            .btn2 {
+                display: flex;
+                background: transparent;
+                transition: 0.4s all ease-in-out;
+                i {
+                    margin-right: 10px;
+                }
+            }
+            button {
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                margin: 10px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+            }
+
+            i {
+                font-size: 1.8rem;
+                color: $p-col;
+            }
+            &:hover {
+                .btn2 {
+                    color: $p-col;
+                }
+            }
+        }
+    }
+}
+
+.home-section {
+    background: $bgblu;
+    .homebox {
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.336);
+        padding: 30px;
+        border-radius: 10px;
+        background-color: $s-col;
+        i {
+            font-size: 2.3rem;
+            color: $p-col;
+            padding: 10% 0;
+        }
+        transition: 0.4s all ease-in-out;
+        &:hover {
+            background-color: $p-col;
+            color: $s-col;
+            i {
+                color: $s-col;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #banner {
+        .bannertitle {
+            padding: 10px;
+            h1 {
+                font-size: 1.6rem;
+            }
+            .lead {
+                font-size: 1.2rem;
+            }
+            .homebtn{
+                .btn1,.btn2,i{
+                    font-size: 0.8rem;
+
+                }
+            }
+        }
+    }
+    .home-section { 
+        padding: 10px;
+        .homebox{
+            text-align: center;
+
+        }
+    }
+
+}

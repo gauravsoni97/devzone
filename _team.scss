@@ -1,0 +1,36 @@
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+// colors in website
+
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #f0f6ff;
+
+#team{
+    background-color: $bgblu;
+    .team-section{
+        .teambox{
+            background-color: $s-col;
+            border-radius: 10px;
+
+            h3{
+                font-size: 1.2rem;
+                text-align: center;
+                padding: 4px 0;
+                margin-top: 10px;
+                
+            }
+            p{
+                font-size: 1rem;
+                color: $para-col;
+                text-align: center;
+padding-bottom: 10px ;
+            }
+        }
+    }
+}

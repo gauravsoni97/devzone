@@ -1,0 +1,44 @@
+//mixins ---
+@mixin flexbox($flex) {
+    display: flex;
+    align-items: center;
+    justify-content: $flex;
+}
+// colors in website
+
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #808e9b;
+
+.navbar {
+
+    .navbar-brand {
+        font-size: 2rem;
+        font-weight: 800;
+        span {
+            color: $p-col;
+            font-size: rem;
+        }
+    }
+    
+    .navbar-nav {
+        .nav-item {
+            
+            .nav-link {
+                font-size: 1rem;
+                margin-right: 10px;
+                font-weight: 500;
+                color: $dark-col;
+                transition: 0.3s all ease-in-out;
+                &:hover{
+                    color: $p-col;
+                }
+            }
+            
+          
+        }
+    }
+}
+

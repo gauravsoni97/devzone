@@ -1,0 +1,129 @@
+$p-col: rgb(16, 110, 234);
+$dark-col: #000000;
+$para-col: #444444;
+$s-col: #ffffff;
+$bgblu: #e7f1fd;
+
+//mixins ---
+@mixin flexbox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about {
+    background-color: #f4f9ff;
+    .row {
+        .aboutimg {
+            width: 100%;
+            height: auto;
+        }
+
+        .iconz {
+            .item1,
+            .item2 {
+                .icon-circle {
+                    width: 80px;
+                    height: 50px;
+                    background-color: $s-col;
+                    border-radius: 50%;
+                    box-shadow: 0 10px 20px #4444442d;
+
+                    @include flexbox();
+                    margin-right: 3%;
+
+                    i {
+                        color: $p-col;
+                        text-shadow: 0px 0px 1px $p-col;
+                    }
+                }
+
+                p {
+                    font-weight: 500;
+                    color: $para-col;
+                }
+            }
+            p {
+                font-weight: 500;
+                color: $para-col;
+            }
+        }
+    }
+}
+
+
+
+.linechart {
+    .bars {
+        margin: 40px 0px;
+        padding: 0 10%;
+    }
+    .bars .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .bars .info span {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .line {
+        width: 100%;
+        height: 8px;
+        background-color: lightgray;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: $p-col;
+        }
+    }
+
+    .html::before {
+        width: 80%;
+    }
+
+    .css::before {
+        width: 75%;
+    }
+
+    .javascript::before {
+        width: 90%;
+    }
+
+    .sass::before {
+        width: 80%;
+    }
+
+    .bootstrap::before {
+        width: 90%;
+    }
+
+    .wordpress::before {
+        width: 60%;
+    }
+}
+
+.client-section{
+    background-color: $bgblu;
+    .client-box{
+display: flex;
+align-items: center;
+justify-content: center;
+    }
+       img{
+           width: 50%;
+           height: auto;
+       }
+    
+}
+
+
